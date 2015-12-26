@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listar Filmes</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+	<form action="/filmes/listarSRV" method="get" class="form-horizontal"
+		enctype="application/x-www-form-urlencoded" name="productForm"
+		id="productForm">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend> Listar Filmes </legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="id">ID</label>
+				<div class="col-md-4">
+					<input id="id" name="id" type="text" placeholder="ID inicial"
+						class="form-control input-md" value="0" required>
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="qtde">Quantidade</label>
+				<div class="col-md-4">
+					<input id="qtde" name="qtde" type="text"
+						placeholder="Quantidade por página de resposta"
+						class="form-control input-md" value="5" >
+
+				</div>
+			</div>
+
+			<!-- Multiple Radios -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="radios">Direção</label>
+				<div class="col-md-4">
+					<div class="radio">
+						<label for="radios-2"> <input type="radio" name="direcao"
+							id="radios-2" value="DIRECAO_ULTIMOS" checked="checked"> Últimos
+						</label>
+					</div>
+					<div class="radio">
+						<label for="radios-0"> <input type="radio" name="direcao"
+							id="radios-0" value="DIRECAO_NOVOS">
+							Novo
+						</label>
+					</div>
+					<div class="radio">
+						<label for="radios-1"> <input type="radio" name="direcao"
+							id="radios-1" value="DIRECAO_ANTIGOS"> Antigos
+						</label>
+					</div>
+
+				</div>
+			</div>
+
+<!-- Multiple Radios -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="radios">Formato da Resposta</label>
+				<div class="col-md-4">
+					<div class="radio">
+						<label for="radios-2"> <input type="radio" name="origem"
+							id="radios-1" value="emHTML" checked="checked"> HTML
+						</label>
+					</div>
+					<div class="radio">
+						<label for="radios-0"> <input type="radio" name="origem"
+							id="radios-0" value="emJSON"> JSON
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="enviar"></label>
+				<div class="col-md-4">
+					<button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+
+
+</body>
+</html>

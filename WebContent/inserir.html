@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>INSERIR FILMES</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+	<form class="form-horizontal" method="post" action="/filmes/inserirSRV"
+		enctype="multipart/form-data">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Filme</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Título</label>
+				<div class="col-md-4">
+					<input id="titulo" name="titulo" type="text"
+						placeholder="Título do filme" class="form-control input-md"
+						required>
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="ano">Ano</label>
+				<div class="col-md-4">
+					<input id="ano" name="ano" type="text"
+						placeholder="Ano de lançamento" class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="nota">Nota</label>
+				<div class="col-md-4">
+					<input id="nota" name="nota" type="text" placeholder="Dê uma nota"
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="genero">Genero</label>
+				<div class="col-md-4">
+					<input id="genero" name="genero" type="text"
+						placeholder="Quais são os generos" class="form-control input-md">
+					<span class="help-block">para mais de um gênero, separe com
+						vírgula (,).</span>
+				</div>
+			</div>
+
+			<!-- Arquivo -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="arquivo">Arquivo</label>
+				<div class="col-md-4">
+					<input id="arq" type="file" name="arq" size="60"
+						placeholder="Caminho do arquivo" class="form-control input-md" /><br />
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="enviar"></label>
+				<div class="col-md-4">
+					<button id="enviar" name="enviar" class="btn btn-primary"
+						value="enviar">Enviar</button>
+				</div>
+			</div>
+
+		</fieldset>
+
+
+
+
+	</form>
+
+
+
+</body>
+</html>
