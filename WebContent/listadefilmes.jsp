@@ -15,6 +15,7 @@
 			<td>Titulo</td>
 			<td>Ano</td>
 			<td>Nota</td>
+			<td>Genero</td>
 			<td>Imagem</td>
 			<td>Tratar</td>
 		</tr>
@@ -39,6 +40,11 @@
 			<td>
 				<%
 					out.print(umFilme.getNotaSTR());
+				%>
+			</td>
+			<td>
+				<%
+					out.print(umFilme.getGeneroSTR());
 				%>
 			</td>
 			<td><img src="<%=umFilme.getImagemUrl()%>" alt="Imagem Postada"

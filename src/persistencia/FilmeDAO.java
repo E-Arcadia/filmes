@@ -15,9 +15,9 @@ public class FilmeDAO {
 
 	private final String SQL_INSERE_FILME = "INSERT INTO appfilme.filme (titulo,imagemURL,ano,nota) VALUES (?,?,?,?);";
 	private final String SQL_EXCLUI_FILME = "DELETE FROM appfilme.filme WHERE idfilme=?;";
-	private final String SQL_SELECIONA_FILME_ANTIGOS = "SELECT filme.* FROM filme WHERE filme.idfilme < ? LIMIT ?;";
-	private final String SQL_SELECIONA_FILME_NOVOS = "SELECT filme.* FROM filme WHERE filme.idfilme > ? LIMIT ?;";
-	private final String SQL_SELECIONA_FILME_ULTIMOS = "SELECT filme.* FROM filme WHERE idfilme <= (SELECT max(idfilme) FROM appfilme.filme) LIMIT ?";
+	private final String SQL_SELECIONA_FILME_ANTIGOS = "SELECT filme.* FROM filme WHERE filme.idfilme < ?  order by filme.idfilme desc LIMIT ?;";
+	private final String SQL_SELECIONA_FILME_NOVOS = "SELECT filme.* FROM filme WHERE filme.idfilme > ?  order by filme.idfilme desc LIMIT ?;";
+	private final String SQL_SELECIONA_FILME_ULTIMOS = "SELECT filme.* FROM filme WHERE idfilme <= (SELECT max(idfilme) FROM appfilme.filme)  order by filme.idfilme desc LIMIT ?";
 	private final String SQL_SELECIONA_FILME_TODOS = "SELECT filme.* FROM filme;";
 
 	private PreparedStatement pst = null;
